@@ -1,0 +1,36 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "A comprehensive biometric attendance tracking system built with fingerprint recognition technology using the DigitalPersona U.are.U 4500 scanner. The system features a modern web interface, secure backend, and advanced fingerprint matching capabilities.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@types/node": "^24.2.0",
+    "@types/react": "^19.1.9",
+    "@types/react-dom": "^19.1.7",
+    "axios": "^1.11.0",
+    "bcryptjs": "^3.0.2",
+    "bootstrap": "^5.3.7",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "express": "^5.1.0",
+    "express-rate-limit": "^8.0.1",
+    "express-validator": "^7.2.1",
+    "helmet": "^8.1.0",
+    "jsonwebtoken": "^9.0.2",
+    "morgan": "^1.10.1",
+    "react": "^19.1.1",
+    "react-dom": "^19.1.1",
+    "react-router-dom": "^7.7.1",
+    "react-scripts": "^5.0.1",
+    "sass": "^1.89.2",
+    "typescript": "^4.9.5",
+    "web-vitals": "^5.1.0",
+    "winston": "^3.17.0"
+  }
+}

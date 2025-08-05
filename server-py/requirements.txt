@@ -1,0 +1,12 @@
+Flask==2.3.3
+Flask-CORS==4.0.0
+opencv-python==4.8.0.76
+opencv-contrib-python==4.8.0.76
+numpy==1.24.3
+Pillow==10.0.0
+scikit-image==0.21.0
+matplotlib==3.7.2
+scipy==1.11.1
+requests==2.31.0
+python-dotenv==1.0.0
+gunicorn==21.2.0

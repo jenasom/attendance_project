@@ -1,0 +1,19 @@
+name: bas_env
+channels:
+  - conda-forge
+  - defaults
+dependencies:
+  - python=3.9
+  - pip
+  - numpy
+  - opencv
+  - flask
+  - flask-cors
+  - requests
+  - pip:
+    - opencv-python==4.8.0.76
+    - opencv-contrib-python==4.8.0.76
+    - Pillow==10.0.0
+    - scikit-image==0.21.0
+    - matplotlib==3.7.2
+    - scipy==1.11.1

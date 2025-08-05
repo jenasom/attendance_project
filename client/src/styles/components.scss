@@ -1,0 +1,289 @@
+// Component-specific styles
+
+// Dashboard
+.dashboard {
+  .stats-card {
+    .card-body {
+      padding: 1.5rem;
+    }
+    
+    .stat-icon {
+      font-size: 2.5rem;
+      opacity: 0.8;
+    }
+  }
+}
+
+// Course cards
+.course-card {
+  transition: transform 0.2s ease;
+  
+  &:hover {
+    transform: translateY(-2px);
+  }
+  
+  .course-actions {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  &:hover .course-actions {
+    opacity: 1;
+  }
+}
+
+// Student list
+.student-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(45deg, #007bff, #6c757d);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+// Fingerprint scanner
+.fingerprint-scanner {
+  .scanner-status {
+    min-height: 100px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .fingerprint-icon {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    
+    &.scanning {
+      color: #007bff;
+      animation: scanPulse 2s infinite;
+    }
+    
+    &.success {
+      color: #28a745;
+    }
+    
+    &.error {
+      color: #dc3545;
+    }
+  }
+}
+
+@keyframes scanPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 0.7;
+  }
+}
+
+// Attendance marking
+.attendance-item {
+  padding: 0.75rem;
+  border-left: 4px solid #e9ecef;
+  margin-bottom: 0.5rem;
+  background: white;
+  border-radius: 0 8px 8px 0;
+  
+  &.present {
+    border-left-color: #28a745;
+  }
+  
+  &.late {
+    border-left-color: #ffc107;
+  }
+  
+  &.absent {
+    border-left-color: #dc3545;
+  }
+}
+
+// Reports
+.report-filters {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.report-stats {
+  .stat-card {
+    text-align: center;
+    padding: 1.5rem;
+    border-radius: 12px;
+    color: white;
+    
+    .stat-number {
+      font-size: 2.5rem;
+      font-weight: bold;
+    }
+    
+    .stat-label {
+      font-size: 0.9rem;
+      opacity: 0.9;
+    }
+  }
+}
+
+// Progress indicators
+.step-progress {
+  .step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    
+    &:not(:last-child)::after {
+      content: '';
+      position: absolute;
+      top: 15px;
+      right: -50%;
+      width: 100%;
+      height: 2px;
+      background: #e9ecef;
+    }
+    
+    &.active::after {
+      background: #007bff;
+    }
+    
+    .step-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      background: #e9ecef;
+      color: #6c757d;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 0.5rem;
+      
+      &.active {
+        background: #007bff;
+        color: white;
+      }
+      
+      &.completed {
+        background: #28a745;
+        color: white;
+      }
+    }
+    
+    .step-label {
+      font-size: 0.9rem;
+      color: #6c757d;
+      
+      &.active {
+        color: #007bff;
+        font-weight: 500;
+      }
+    }
+  }
+}
+
+// Empty states
+.empty-state {
+  text-align: center;
+  padding: 3rem 1rem;
+  
+  .empty-icon {
+    font-size: 4rem;
+    color: #dee2e6;
+    margin-bottom: 1rem;
+  }
+  
+  .empty-title {
+    color: #495057;
+    margin-bottom: 0.5rem;
+  }
+  
+  .empty-description {
+    color: #6c757d;
+    margin-bottom: 2rem;
+  }
+}
+
+// Loading states
+.loading-spinner {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #f3f3f3;
+  border-top: 2px solid #007bff;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+// Alerts
+.alert {
+  border: none;
+  border-radius: 8px;
+  
+  &.alert-success {
+    background-color: #d1e7dd;
+    color: #0f5132;
+  }
+  
+  &.alert-danger {
+    background-color: #f8d7da;
+    color: #842029;
+  }
+  
+  &.alert-warning {
+    background-color: #fff3cd;
+    color: #664d03;
+  }
+  
+  &.alert-info {
+    background-color: #d1ecf1;
+    color: #055160;
+  }
+}
+
+// Responsive utilities
+@media (max-width: 768px) {
+  .mobile-hide {
+    display: none !important;
+  }
+  
+  .mobile-full-width {
+    width: 100% !important;
+  }
+  
+  .card {
+    margin-bottom: 1rem;
+  }
+  
+  .table-responsive {
+    font-size: 0.9rem;
+  }
+}
+
+// Print styles
+@media print {
+  .no-print {
+    display: none !important;
+  }
+  
+  .card {
+    box-shadow: none !important;
+    border: 1px solid #dee2e6 !important;
+  }
+  
+  .table {
+    font-size: 0.9rem;
+  }
+}
